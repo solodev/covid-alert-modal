@@ -1,0 +1,104 @@
+<div class="covid-banner" style="display: none;">
+  <div>
+    <p>
+      We are committed to providing updates during this time.
+      <a class="banner-more" href="#">Learn More</a>
+      <a class="banner-dismiss" href="#">Dismiss</a>
+    </p>
+  </div>
+</div>
+
+<style>
+.covid-banner {
+	border-top: 2px solid #d10000;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	padding: 1rem .5rem;
+	background: #fff;
+	z-index: 1030;
+	color: #000;
+	font-size: 14px;
+	margin: 0;
+	display: none;
+}
+.covid-banner p {
+	margin: 0;
+	color: #000;
+	text-align: center;
+}
+.covid-banner .banner-wrapper p {
+		padding-right: 3rem;
+}
+.covid-banner a {
+	text-decoration: none;
+	margin: 20px auto 0 auto;
+	display: block;
+	max-width: 150px;
+}
+.covid-banner a:hover {
+	text-decoration: underline;
+}
+.covid-banner button {
+	position: absolute;
+	right: 5px;
+	top: calc(50% - 12.5px);
+	color: #fff;
+	outline: 0;
+	height: 25px;
+	width: 25px;
+	border: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.35rem;
+	font-weight: 700;
+	border-radius: 50%;
+	text-align: center;
+	padding: 0;
+	line-height: 1;
+	background: #000;
+	cursor: pointer;
+}
+.banner-dismiss {
+	color: #000;
+}
+.banner-more {
+	padding: 7px 15px;
+	color: #fff;
+	border-radius: 5px;
+	background: #d10000;
+}
+@media (min-width: 768px) {
+	.covid-banner {
+		padding: 1.5rem .5rem;
+	}
+	.covid-banner a {
+		display: inline-block;
+		margin: 0 10px;
+	}
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script>
+// Banner Trigger if Not Closed
+if (!localStorage.bannerClosed) {
+  $('.covid-banner').css('display', 'inherit');
+} else {
+  $('.covid-banner').css('display', 'none');
+}
+$('.covid-banner button').click(function() {
+  $('.covid-banner').css('display', 'none');
+  localStorage.bannerClosed = 'true';
+});
+$('.banner-dismiss').click(function() {
+  $('.covid-banner').css('display', 'none');
+  localStorage.bannerClosed = 'true';
+});
+if (navigator.userAgent.match(/Opera|OPR\//)) {
+  $('.covid-banner').css('display', 'inherit');
+}
+</script>
