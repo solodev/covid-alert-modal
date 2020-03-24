@@ -103,7 +103,7 @@ Customize all colors to meet your individual brand needs. The main "covid-banner
 }
 ```
 
-## HTML
+## JavaScript
 
 The below JavaScript is optional if you want to enable the "dismiss" feature. Using the below JS (with jQuery needed), you can set a local storage cookie so that users can dismiss the modal and have it not re-appear.
 
