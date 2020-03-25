@@ -44,6 +44,7 @@ Customize all colors to meet your individual brand needs. The main "covid-banner
 	color: #000;
 	font-size: 14px;
 	margin: 0;
+	font-family: Inter, sans-serif;
 }
 .covid-banner p {
 	margin: 0;
